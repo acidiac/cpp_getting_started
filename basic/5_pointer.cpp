@@ -1,3 +1,9 @@
+/*
+  @file: basic/5_pointer.cpp
+  @subject: program demostrating pointers
+  @author: amit chanchal <amit.chanchal@hotmail.com>
+  @date: April 2017
+*/
 #include <iostream>
 
 using namespace std;

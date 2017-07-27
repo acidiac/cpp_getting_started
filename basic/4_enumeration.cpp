@@ -1,3 +1,9 @@
+/*
+  @file: basic/4_enumeration.cpp
+  @subject: enumeration datatyp
+  @author: amit chanchal <amit.chanchal@hotmail.com>
+  @date: April 2017
+*/
 #include <iostream>
 using namespace std;
 

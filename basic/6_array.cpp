@@ -1,3 +1,10 @@
+/*
+  @file: basic/6_array.cpp
+  @subject: Basic array
+  @author: amit chanchal <amit.chanchal@hotmail.com>
+  @date: April 2017
+*/
+
 #include <iostream>
 /*
     Array is a collection of object of same datatype. 'int marks[10]' is an array of variable name marks with 10 elements.
