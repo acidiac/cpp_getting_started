@@ -1,9 +1,11 @@
 /*
-  @file: basic/prg1.cpp
+  @file: basic/1_hello.cpp
   @subject: Basic first program
   @author: amit chanchal <amit.chanchal@hotmail.com>
   @date: April 2017
 */
+
+// !! Please read compiling CPP programs to learn how to compile.
 
 // Including the library as header file, this is available to you through system
 #include<iostream>
