@@ -15,7 +15,7 @@ or
 * g++ : is the compiler we are using
 * myprog.cpp: is the name of the file
 
-##Option2
+## Option2
 > g++ -o myprog myprog.cpp 
 
 If you want to give a specific name to your compiled file you can use "-o" flag and provide the desired name. Now instead of a.out you can use the name that you have specified. In the above case 
