@@ -21,3 +21,6 @@ Is constant character value which can be used in programs for various effects.
 * ’\t’ tab
 * ’\0’ null
 * ’\"’ double quote
+
+## Integers ( short, int and long)
+Integer as the name suggests holds integer values. 
