@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1471041568 source:/home/amit/codes/cpp/mca_c/mca_c/test.c
+	<stdio.h>
+
+1471723985 source:/home/amit/codes/cpp/mca_c/mca_c/hello.c
+	<stdio.h>
+
