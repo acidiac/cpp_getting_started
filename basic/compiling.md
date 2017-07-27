@@ -8,6 +8,17 @@ Let's say we had a cpp program called myprog.cpp. Using GCC we can compile it us
 ## Option1
  >g++ myprog.cpp 
 
-
+This is the simplest way you can compile your c++ programs. The compiled version of the file is stored as a.out by default in the same folder. You can run this by either just typing 
+>a.out
+or 
+>./a.out
 * g++ : is the compiler we are using
 * myprog.cpp: is the name of the file
+
+##Option2
+> g++ -o myprog myprog.cpp 
+
+If you want to give a specific name to your compiled file you can use "-o" flag and provide the desired name. Now instead of a.out you can use the name that you have specified. In the above case 
+> ./myprog or myprog
+
+
