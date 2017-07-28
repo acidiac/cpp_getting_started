@@ -9,7 +9,7 @@
 using namespace std;
 
 /*
-    There is an interesting connection between arrays and pointers, which C++ inherited from the C programming language
+    The way arrays are implemented in C++ is inherited
     the name of an array is equivalent to a pointer to the array’s initial element and vice versa. In the example below, 
     c is an array of characters, and p and q are pointers to the first element of c. They all behave essentially the same!
 */
