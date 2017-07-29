@@ -1,3 +1,10 @@
+/*
+  @file: basic/16_typedef.cpp
+  @subject: using enums
+  @author: amit chanchal <amit.chanchal@hotmail.com>
+  @date: April 2017
+*/
+
 #include <iostream>
 #include <string>
 #include <cmath>
