@@ -35,7 +35,11 @@ class Rectangle{
     // Constructor function, we have three ways we can initialize this class (remember function overloading?)
     // As a good practice we do not include function definitions in the class body 
     Rectangle();
-    Rectangle (double ab, double bc);
+    Rectangle (double a, double b);
+
+    // Inline setter functions
+    void  setA (double a){ lenA = a; }
+    void setB (double b){lenB = b; }
 
     // Getting area of the rectangle
     double area( );
@@ -45,36 +49,46 @@ class Rectangle{
 
     // destructor
     ~Rectangle();
+};
+
+
+Rectangle::Rectangle (double a, double b){
+    lenA = a;
+    lenB = b;
 }
 
-
-Rectangle::Rectangle (double ab, double bc){
-    // assuming point a to be at (0,0)
-    a.x = 0;
-    a.y = 0;
-
-}
-
-Rectangle::Rectangle(Point x, Point y , Point z, Point w){
-    a = x;
-    b = y;
-    c = z;
-    d = w;
+Rectangle::Rectangle(){
+    lenA = 0;
+    lenB = 0;
 }
 
 double Rectangle::area( ){
-
-
+    double area;
+    area = lenA * lenB;
+    return area;
 }
 
 double Rectangle::perimeter( ){
-
-}
-
-bool Rectangle::isIdentical(Rectangle){
-
+    double perimeter;
+    perimeter = 2*(lenA+lenB);
+    return perimeter;
 }
 
 Rectangle::~Rectangle(){
 
+}
+
+int main (){
+    Rectangle a(5,6);
+    double area =  a.area();
+    cout<<"Area: "<<area<<endl;
+    //  with new operator
+    Rectangle* b = new Rectangle(10.1,10.2);
+    area = b->area();
+    cout<<"Area: "<<area<<endl;
+    b->setA(2);
+    b->setB(4);
+    area = b->area();
+    cout<<"Area: "<<area<<endl;
+    return 0;
 }
