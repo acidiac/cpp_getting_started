@@ -47,11 +47,9 @@ class Rectangle{
     // getting perimeter of the rectangle
     double perimeter();
 
-    // destructor
-    ~Rectangle();
 };
 
-
+// Defining all the functions in the class by using scope operator "::"
 Rectangle::Rectangle (double a, double b){
     lenA = a;
     lenB = b;
@@ -74,16 +72,19 @@ double Rectangle::perimeter( ){
     return perimeter;
 }
 
-Rectangle::~Rectangle(){
 
-}
 
 int main (){
     Rectangle a(5,6);
     double area =  a.area();
     cout<<"Area: "<<area<<endl;
-    //  with new operator
+    /*  
+        with new operator
+        new operator assigns memory and returns a pointer to the memory location.
+        Rectangle* is a pointer to class Rectangle
+    */
     Rectangle* b = new Rectangle(10.1,10.2);
+    // Using arrow operator to access contents at the pointer location 
     area = b->area();
     cout<<"Area: "<<area<<endl;
     b->setA(2);
