@@ -19,7 +19,18 @@ using namespace std;
     does not need contiguous memory and it can grow and shrink at runtime. Data is stored in node which is made up of data and pointer
     address to next node. In a way, its like a train with connectors in between that allow us navigating entire length of the train.
 
-    A[ data | &B ] ==> B[ data | &C ] ==> C[ data | &N ] ==> N[ data | NULL]
+    A node contains data and address of the next node which is a pointer.
+    struct Node{
+        <datatype> data;
+        struct Node* next;
+    };
 
+    NodeA[ data | &B ] ==> NodeB[ data | &C ] ==> NodeC[ data | &N ] ==> NodeN[ data | NULL]
 
+    Terms
+    ~~~~~~~~~~~~
+    next pointer: Is the pointer to the next node 
+    Link Hopping: When we traverse the nodes one to another sequential using the next
+    Head: First node in the list
+    Tail: Last node in the list
 */
