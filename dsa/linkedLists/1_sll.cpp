@@ -74,6 +74,35 @@ int SLL::head(){
     return head->data;
 }
 
+/*
+    Adding a new node to the front of the list
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    lets imagine a list which has two nodes A and B and to this we want to add another node X in front.  nodeX{data: 1, next: &A}
+    
+        nodeA{data: 55, next: &B } ==> nodeB{data:10, next: NULL}
+
+    step1: lets create a new node 
+        Node* X =  new Node;
+        // remember this node is not part of list as yet
+
+    step2: Add data to the node
+        X->data = n // whatever integer you want to add for us n =1
+    
+    step3: Add it to the list by referencing it
+        // head now points to the nodeA which is at the beginning to the list
+        // and as we have to add this before nodeA, next of our new node should point to nodeA
+        X->next = head 
+
+        // now as the first node is nodeX we must now reference it as head so
+        head = X;
+
+    in effect what we have now is
+
+        nodeX{data:1, next:&nodeA} ==> nodeA{data: 55, next: &nodeB } ==> nodeB{data:10, next: NULL}
+
+    that was simple wasn't it?
+
+*/
 void SLL::addFront(int n){
     Node* newNode = new Node;
     newNode->data = n;
