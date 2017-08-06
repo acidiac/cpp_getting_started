@@ -113,7 +113,7 @@ void SLL::addFront(int n){
 /*
     Removing the first Node 
     ~~~~~~~~~~~~~~~~
-    
+
 */
 int SLL::removeFront(){
     Node* toDelete = head;
@@ -121,6 +121,16 @@ int SLL::removeFront(){
     delete toDelete;
 }
 
+
+void SLL::displayList(){
+    Node* start = head;
+    int count = 0;
+    while (start->next !=NULL){
+        cout<<"Node"<<count<<"{ data:"<< start->data<<"}"<<endl;
+        count++;
+        start = start->next;
+    }
+}
 
 
 
