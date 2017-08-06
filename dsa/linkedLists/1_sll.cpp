@@ -132,6 +132,15 @@ void SLL::displayList(){
     }
 }
 
+int main(){
+    SLL a;
+    a.addFront(10);
+    a.displayList();
+    a.addFront(5);
+    a.displayList();
+    return 0;
+}
+
 
 
 
