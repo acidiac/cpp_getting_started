@@ -51,7 +51,7 @@ public:
     bool empty();  // checking if the list is empty
     int head();  // getting the data stored in the first/head node
     void addFront(int n);  // adding a node to the beginning to the list
-    void removeFront(int n); // removing the first node in the list
+    int removeFront(); // removing the first node in the list
     void displayList(); // Prints out the entrie list in sequence
 private:
     Node* head;  // pointer to the head/first node in the list
@@ -108,6 +108,17 @@ void SLL::addFront(int n){
     newNode->data = n;
     newNode->next = head;
     head = newNode;
+}
+
+/*
+    Removing the first Node 
+    ~~~~~~~~~~~~~~~~
+    
+*/
+int SLL::removeFront(){
+    Node* toDelete = head;
+    head = toDelete->next;
+    delete toDelete;
 }
 
 
