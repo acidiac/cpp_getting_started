@@ -25,11 +25,51 @@ private:
     // head and tail are two important data that we need to reference our list
     node* head;
     node* tail;
+    
 public:
+
+        //Constructor Function
+        SLL()
+
+        // Creating a node
+        void createNode(int val)
+
+        //Displaying the nodes in the List
+        void display()
+
+        //Insertion operations, insert at start, insert at end and insert at any position
+        void insertAtStart(int val)
+
+        //Inserting node at the end of the list
+        void insertAtEnd(int val)
+
+        // Inserting node at a particular position in the LIST
+        void insertAtPos(int val, int pos)
+
+        //Deletion at the start
+        void deleteFirst()
+
+        //Deletion at the end
+        void deleteLast()
+
+        //Deletion at a particular position
+        void deleteAtPos(int pos);
+
+        // LENGTH of the List
+        int length();
+
+}; // End of Class
+
+
+// DEFINITIONS FOR CLASS METHODS
+
+//Constructor Function
 SLL(){
         head = NULL;
         tail = NULL;
 }
+
+// Creating a node
 void createNode(int val){
         // new keywords create and allocates space to the temp node
         node *temp = new node;
@@ -48,35 +88,6 @@ void createNode(int val){
                 tail = temp;
         }
 }
-
-
-
-
-//Insertion operations, insert at start, insert at end and insert at any position
-void insertAtStart(int val)
-
-//Inserting node at the end of the list
-void insertAtEnd(int val)
-
-// Inserting node at a particular position in the LIST
-void insertAtPos(int val, int pos)
-
-//Deletion at the start
-void deleteFirst()
-
-//Deletion at the end
-void deleteLast()
-
-//Deletion at a particular position
-void deleteAtPos(int pos);
-
-// LENGTH of the List
-int length();
-
-}; // End of Class
-
-
-// DEFINITIONS FOR CLASS METHODS
 
 //Displaying the nodes in the List
 void display(){
