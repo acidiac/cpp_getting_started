@@ -49,7 +49,7 @@ public:
     SLL();  // list constructor
     ~SLL(); // List destructor
     bool empty();  // checking if the list is empty
-    int head();  // getting the data stored in the first/head node
+    int firstNode();  // getting the data stored in the first/head node
     void addFront(int n);  // adding a node to the beginning to the list
     int removeFront(); // removing the first node in the list
     void displayList(); // Prints out the entrie list in sequence
@@ -70,7 +70,7 @@ bool SLL::empty(){
     return head == NULL ;
 }
 
-int SLL::head(){
+int SLL::firstNode(){
     return head->data;
 }
 
@@ -116,9 +116,12 @@ void SLL::addFront(int n){
 
 */
 int SLL::removeFront(){
+    int deletedData;
     Node* toDelete = head;
+    deletedData = toDelete->data;
     head = toDelete->next;
     delete toDelete;
+    return deletedData;
 }
 
 
