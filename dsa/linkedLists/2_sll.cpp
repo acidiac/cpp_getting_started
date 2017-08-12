@@ -186,10 +186,33 @@ int length(){
         return length;
 }
 
-
+void displayOptions(){
+        cout<<"Please select one of the following options:"<<endl;
+        cout<<"\t1: Add a new Node "<<endl;
+        cout<<"\t2: Display all Nodes"<<endl;
+        cout<<"\t3: Delete First Node"<<endl;
+        cout<<"\t4: Delete Last Node"<<endl;
+}
 
 int main(){
         SLL myList;
+        int userOption ; 
+        cout<<"Please select your option"
+        cin>>userOption;
+        switch(userOption){
+                case 1:
+
+                break;
+                case 2:
+                break;
+                case 3:
+                break;
+                case 4:
+                break;
+                default:
+                userOption = 0 ;
+                break;
+        }
         myList.createNode(2);
         myList.createNode(3);
         myList.createNode(4);
