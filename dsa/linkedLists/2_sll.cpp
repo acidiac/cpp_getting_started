@@ -208,7 +208,7 @@ int main(){
         int userOption = 1; 
         while(userOption != 0){
                 displayOptions();
-                cout<<"Please select your option:"
+                cout<<"Please select your option:";
                 cin>>userOption;
                 switch(userOption){
                         case 1:
