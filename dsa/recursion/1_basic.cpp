@@ -16,16 +16,17 @@ using namespace std;
     Recursive Case: n * factorial(n-1) for all (n>1)
 */
 
-int recFatorial(int n){
+long recFactorial(int n){
     if(n==0){
         return 1;
     } else {
-        return n* recFatorial(n-1);
+        return n* recFactorial(n-1);
     }
 }
 
 int main(){
-    int userInput, result;
+    int userInput;
+    long result;
     cout<<"Please enter a number: ";
     cin>>userInput;
     result = recFactorial(userInput);
