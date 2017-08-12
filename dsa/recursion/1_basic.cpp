@@ -17,9 +17,10 @@ using namespace std;
 */
 
 long recFactorial(int n){
-    if(n==0){
-        return 1;
+    if(n==0){ // this is the base case
+        return 1; 
     } else {
+        // the recursive case
         return n* recFactorial(n-1);
     }
 }
