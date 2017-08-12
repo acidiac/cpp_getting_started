@@ -29,28 +29,31 @@ private:
 public:
 
         //Constructor Function
-        SLL()
+        SLL();
 
         // Creating a node
-        void createNode(int val)
+        void createNode(int val);
+
+        // Checking if the node is empty
+        bool empty();
 
         //Displaying the nodes in the List
-        void display()
+        void display();
 
         //Insertion operations, insert at start, insert at end and insert at any position
-        void insertAtStart(int val)
+        void insertAtStart(int val);
 
         //Inserting node at the end of the list
-        void insertAtEnd(int val)
+        void insertAtEnd(int val);
 
         // Inserting node at a particular position in the LIST
-        void insertAtPos(int val, int pos)
+        void insertAtPos(int val, int pos);
 
         //Deletion at the start
-        void deleteFirst()
+        void deleteFirst();
 
         //Deletion at the end
-        void deleteLast()
+        void deleteLast();
 
         //Deletion at a particular position
         void deleteAtPos(int pos);
@@ -64,13 +67,13 @@ public:
 // DEFINITIONS FOR CLASS METHODS
 
 //Constructor Function
-SLL(){
+SLL::SLL(){
         head = NULL;
         tail = NULL;
 }
 
 // Creating a node
-void createNode(int val){
+void SLL::createNode(int val){
         // new keywords create and allocates space to the temp node
         node *temp = new node;
         temp->data = val;
@@ -89,8 +92,13 @@ void createNode(int val){
         }
 }
 
+// Checking if the list is empty
+bool SLL::empty(){
+        return head ==NULL;
+}
+
 //Displaying the nodes in the List
-void display(){
+void SLL::display(){
         node *temp = new node;
         temp = head;
         cout<<endl<<"----------Displaying the nodes ----------------"<<endl;
@@ -103,7 +111,7 @@ void display(){
 }
 
 //Insertion operations, insert at start, insert at end and insert at any position
-void insertAtStart(int val){
+void SLL::insertAtStart(int val){
         /*
            New node should be connected to the first node, which means the head.
            This can be achieved by putting the address of the head in the next field of the new node.
@@ -117,7 +125,7 @@ void insertAtStart(int val){
 }
 
 //Inserting node at the end of the list
-void insertAtEnd(int val){
+void SLL::insertAtEnd(int val){
         node *temp = new node;
         temp->data = val;
         tail->next = temp;
@@ -125,7 +133,7 @@ void insertAtEnd(int val){
 }
 
 // Inserting node at a particular position in the LIST
-void insertAtPos(int val, int pos){
+void SLL::insertAtPos(int val, int pos){
         node *temp = new node;
         node *previous = new node;
         node *current = new node;
@@ -140,7 +148,7 @@ void insertAtPos(int val, int pos){
 }
 
 //Deletion at the start
-void deleteFirst(){
+void SLL::deleteFirst(){
         node *temp = new node;
         temp = head;
         head = head->next;
@@ -148,7 +156,7 @@ void deleteFirst(){
 }
 
 //Deletion at the end
-void deleteLast(){
+void SLL::deleteLast(){
         node *current = new node;
         node *previous = new node;
         current =  head;
@@ -162,7 +170,7 @@ void deleteLast(){
 }
 
 //Deletion at a particular position
-void deleteAtPos(int pos){
+void SLL::deleteAtPos(int pos){
         node *current = new node;
         node *previous = new node;
         current = head;
@@ -175,7 +183,7 @@ void deleteAtPos(int pos){
 }
 
 // LENGTH of the List
-int length(){
+int SLL::length(){
         node *temp = new node;
         temp = head;
         int length = 0;
@@ -196,29 +204,35 @@ void displayOptions(){
 
 int main(){
         SLL myList;
-        int userOption ; 
-        cout<<"Please select your option"
-        cin>>userOption;
-        switch(userOption){
-                case 1:
-
-                break;
-                case 2:
-                break;
-                case 3:
-                break;
-                case 4:
-                break;
-                default:
-                userOption = 0 ;
-                break;
+        int userOption = 1; 
+        while(userOption){
+                displayOptions();
+                cout<<"Please select your option:"
+                cin>>userOption;
+                switch(userOption){
+                        case 1:
+                                int data;
+                                cout<<"Enter the data to be stored in the Node:";
+                                cin>>data;
+                                myList.createNode(data);
+                                break;
+                        case 2:
+                                cout<<"Displaying details of the list"<<endl;
+                                cout<<"Length of the list: "<<myList.length()<<endl;
+                                myList.display();
+                                break;
+                        case 3:
+                                if(myList.empty())
+                                
+                        break;
+                        case 4:
+                        break;
+                        default:
+                        userOption = 0 ;
+                        break;
+                }
         }
-        myList.createNode(2);
-        myList.createNode(3);
-        myList.createNode(4);
-        myList.insertAtStart(1);
-        myList.insertAtEnd(5);
-        myList.display();
+
         return 0;
 }
 
