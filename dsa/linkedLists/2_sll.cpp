@@ -200,12 +200,13 @@ void displayOptions(){
         cout<<"\t2: Display all Nodes"<<endl;
         cout<<"\t3: Delete First Node"<<endl;
         cout<<"\t4: Delete Last Node"<<endl;
+        cout<<"\t0: To exit!"<<endl;
 }
 
 int main(){
         SLL myList;
         int userOption = 1; 
-        while(userOption){
+        while(userOption != 0){
                 displayOptions();
                 cout<<"Please select your option:"
                 cin>>userOption;
@@ -222,11 +223,19 @@ int main(){
                                 myList.display();
                                 break;
                         case 3:
-                                if(myList.empty())
-                                
-                        break;
+                                if(myList.empty()){
+                                        cout<<"No nodes to delete!"<<endl;
+                                } else {
+                                        myList.deleteFirst();
+                                } 
+                                break;
                         case 4:
-                        break;
+                                if(myList.empty()){
+                                        cout<<"No nodes to delete!"<<endl;
+                                } else {
+                                        myList.deleteLast();
+                                } 
+                                break;
                         default:
                         userOption = 0 ;
                         break;
